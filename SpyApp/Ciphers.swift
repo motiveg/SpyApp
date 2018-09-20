@@ -169,8 +169,8 @@ struct AlphanumericCesarCipher: Cipher {
                 var shiftedUnicode = unicode
                 
                 // if uppercase, convert to lowercase
-                if (unicode >= alphaUpperMin && unicode <= alphaUpperMax) {
-                    shiftedUnicode += 32
+                if (unicode >= alphaMin && unicode <= alphaMax) {
+                    shiftedUnicode -= 32
                 }
                 
                 while remainingShift > 0 {
@@ -185,7 +185,7 @@ struct AlphanumericCesarCipher: Cipher {
                         // remaining shift amount too big
                         if (shiftedUnicode + remainingShift > numMax) {
                             remainingShift = remainingShift - ( numMax - shiftedUnicode ) - 1
-                            shiftedUnicode = alphaMin
+                            shiftedUnicode = alphaUpperMin
                         }
                             
                         // remaining shift amount is used
@@ -196,11 +196,11 @@ struct AlphanumericCesarCipher: Cipher {
                     }
                         
                     // check if shiftedUnicode is lower alpha
-                    else if (shiftedUnicode >= alphaMin && shiftedUnicode <= alphaMax) {
+                    else if (shiftedUnicode >= alphaUpperMin && shiftedUnicode <= alphaUpperMax) {
                         
                         // remaining shift amount too big
-                        if (shiftedUnicode + remainingShift > alphaMax) {
-                            remainingShift = remainingShift - ( alphaMax - shiftedUnicode ) - 1
+                        if (shiftedUnicode + remainingShift > alphaUpperMax) {
+                            remainingShift = remainingShift - ( alphaUpperMax - shiftedUnicode ) - 1
                             shiftedUnicode = numMin
                         }
                             
@@ -260,8 +260,8 @@ struct AlphanumericCesarCipher: Cipher {
                 var shiftedUnicode = unicode
                 
                 // if uppercase, convert to lowercase
-                if (unicode >= alphaUpperMin && unicode <= alphaUpperMax) {
-                    shiftedUnicode += 32
+                if (unicode >= alphaMin && unicode <= alphaMax) {
+                    shiftedUnicode -= 32
                 }
                 
                 while remainingShift > 0 {
@@ -276,7 +276,7 @@ struct AlphanumericCesarCipher: Cipher {
                         // remaining shift amount too big
                         if (shiftedUnicode < numMin + remainingShift) {
                             remainingShift = remainingShift - ( shiftedUnicode - numMin ) - 1
-                            shiftedUnicode = alphaMax
+                            shiftedUnicode = alphaUpperMax
                         }
                             
                         // remaining shift amount is used
@@ -287,11 +287,11 @@ struct AlphanumericCesarCipher: Cipher {
                     }
                         
                     // check if shiftedUnicode is lower alpha
-                    else if (shiftedUnicode >= alphaMin && shiftedUnicode <= alphaMax) {
+                    else if (shiftedUnicode >= alphaUpperMin && shiftedUnicode <= alphaUpperMax) {
                         
                         // remaining shift amount too big
-                        if (shiftedUnicode < alphaMin + remainingShift) {
-                            remainingShift = remainingShift - ( shiftedUnicode - alphaMin ) - 1
+                        if (shiftedUnicode < alphaUpperMin + remainingShift) {
+                            remainingShift = remainingShift - ( shiftedUnicode - alphaUpperMin ) - 1
                             shiftedUnicode = numMax
                         }
                             
