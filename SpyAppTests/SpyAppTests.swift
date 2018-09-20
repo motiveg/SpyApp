@@ -11,12 +11,9 @@ import XCTest
 
 class SpyAppTests: XCTestCase {
     
-    var cipher: Cipher!
-    
     override func setUp() {
         super.setUp()
-        
-        cipher = CeaserCipher()
+        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     override func tearDown() {
@@ -34,20 +31,6 @@ class SpyAppTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
-    }
-    
-    func text_oneCharacterStringGetsMappedToSelfWith_0_secret() {
-        let plaintext = "a"
-        let result = cipher.encode(plaintext, secret: "0")
-        
-        XCTAssertEqual(plaintext, result)
-    }
-    
-    func test_nonNumericInputInSecret() {
-        let plaintext = "a"
-        let result = cipher.encode(plaintext, secret: "secret")
-        
-        XCTAssertNil(result)
     }
     
 }

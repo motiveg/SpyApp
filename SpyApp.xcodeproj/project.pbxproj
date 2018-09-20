@@ -7,14 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5DC53D1F214B5C3400FC51CC /* CeasarCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC53D1E214B5C3400FC51CC /* CeasarCipherTests.swift */; };
+		5DC53D1F214B5C3400FC51CC /* CesarCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC53D1E214B5C3400FC51CC /* CesarCipherTests.swift */; };
+		5DE81E282152F04700CA7298 /* AlphanumericCesarCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE81E272152F04700CA7298 /* AlphanumericCesarCipherTests.swift */; };
+		5DE81E2A2152F0FC00CA7298 /* FtnCipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE81E292152F0FC00CA7298 /* FtnCipherTests.swift */; };
+		5DE81E2C2152F10B00CA7298 /* Ftn2CipherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE81E2B2152F10B00CA7298 /* Ftn2CipherTests.swift */; };
+		5DE81E2E2152F4B600CA7298 /* NotesForTests in Resources */ = {isa = PBXBuildFile; fileRef = 5DE81E2D2152F4B600CA7298 /* NotesForTests */; };
 		970E4DD52138EC8600BA3EE9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DD42138EC8600BA3EE9 /* AppDelegate.swift */; };
 		970E4DD72138EC8600BA3EE9 /* SpyAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DD62138EC8600BA3EE9 /* SpyAppViewController.swift */; };
 		970E4DDA2138EC8600BA3EE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E4DD82138EC8600BA3EE9 /* Main.storyboard */; };
 		970E4DDC2138EC8700BA3EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 970E4DDB2138EC8700BA3EE9 /* Assets.xcassets */; };
 		970E4DDF2138EC8700BA3EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 970E4DDD2138EC8700BA3EE9 /* LaunchScreen.storyboard */; };
 		970E4DEA2138EC8700BA3EE9 /* SpyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DE92138EC8700BA3EE9 /* SpyAppTests.swift */; };
-		970E4DF52138FC0B00BA3EE9 /* CeaserCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DF42138FC0B00BA3EE9 /* CeaserCipher.swift */; };
+		970E4DF52138FC0B00BA3EE9 /* Ciphers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DF42138FC0B00BA3EE9 /* Ciphers.swift */; };
 		970E4DF721392D4800BA3EE9 /* CipherFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 970E4DF621392D4800BA3EE9 /* CipherFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +33,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5DC53D1E214B5C3400FC51CC /* CeasarCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeasarCipherTests.swift; sourceTree = "<group>"; };
+		5DC53D1E214B5C3400FC51CC /* CesarCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CesarCipherTests.swift; sourceTree = "<group>"; };
+		5DE81E272152F04700CA7298 /* AlphanumericCesarCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphanumericCesarCipherTests.swift; sourceTree = "<group>"; };
+		5DE81E292152F0FC00CA7298 /* FtnCipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FtnCipherTests.swift; sourceTree = "<group>"; };
+		5DE81E2B2152F10B00CA7298 /* Ftn2CipherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ftn2CipherTests.swift; sourceTree = "<group>"; };
+		5DE81E2D2152F4B600CA7298 /* NotesForTests */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = NotesForTests; sourceTree = "<group>"; };
 		970E4DD12138EC8600BA3EE9 /* SpyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		970E4DD42138EC8600BA3EE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		970E4DD62138EC8600BA3EE9 /* SpyAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAppViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +48,7 @@
 		970E4DE52138EC8700BA3EE9 /* SpyAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpyAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		970E4DE92138EC8700BA3EE9 /* SpyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyAppTests.swift; sourceTree = "<group>"; };
 		970E4DEB2138EC8700BA3EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		970E4DF42138FC0B00BA3EE9 /* CeaserCipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeaserCipher.swift; sourceTree = "<group>"; };
+		970E4DF42138FC0B00BA3EE9 /* Ciphers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ciphers.swift; sourceTree = "<group>"; };
 		970E4DF621392D4800BA3EE9 /* CipherFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +93,7 @@
 			children = (
 				970E4DD42138EC8600BA3EE9 /* AppDelegate.swift */,
 				970E4DD62138EC8600BA3EE9 /* SpyAppViewController.swift */,
-				970E4DF42138FC0B00BA3EE9 /* CeaserCipher.swift */,
+				970E4DF42138FC0B00BA3EE9 /* Ciphers.swift */,
 				970E4DF621392D4800BA3EE9 /* CipherFactory.swift */,
 				970E4DD82138EC8600BA3EE9 /* Main.storyboard */,
 				970E4DDB2138EC8700BA3EE9 /* Assets.xcassets */,
@@ -99,7 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				970E4DE92138EC8700BA3EE9 /* SpyAppTests.swift */,
-				5DC53D1E214B5C3400FC51CC /* CeasarCipherTests.swift */,
+				5DC53D1E214B5C3400FC51CC /* CesarCipherTests.swift */,
+				5DE81E272152F04700CA7298 /* AlphanumericCesarCipherTests.swift */,
+				5DE81E292152F0FC00CA7298 /* FtnCipherTests.swift */,
+				5DE81E2B2152F10B00CA7298 /* Ftn2CipherTests.swift */,
+				5DE81E2D2152F4B600CA7298 /* NotesForTests */,
 				970E4DEB2138EC8700BA3EE9 /* Info.plist */,
 			);
 			path = SpyAppTests;
@@ -155,9 +167,11 @@
 				TargetAttributes = {
 					970E4DD02138EC8600BA3EE9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 					};
 					970E4DE42138EC8700BA3EE9 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
 						TestTargetID = 970E4DD02138EC8600BA3EE9;
 					};
 				};
@@ -196,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5DE81E2E2152F4B600CA7298 /* NotesForTests in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				970E4DF52138FC0B00BA3EE9 /* CeaserCipher.swift in Sources */,
+				970E4DF52138FC0B00BA3EE9 /* Ciphers.swift in Sources */,
 				970E4DF721392D4800BA3EE9 /* CipherFactory.swift in Sources */,
 				970E4DD72138EC8600BA3EE9 /* SpyAppViewController.swift in Sources */,
 				970E4DD52138EC8600BA3EE9 /* AppDelegate.swift in Sources */,
@@ -218,7 +233,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				970E4DEA2138EC8700BA3EE9 /* SpyAppTests.swift in Sources */,
-				5DC53D1F214B5C3400FC51CC /* CeasarCipherTests.swift in Sources */,
+				5DE81E2C2152F10B00CA7298 /* Ftn2CipherTests.swift in Sources */,
+				5DE81E2A2152F0FC00CA7298 /* FtnCipherTests.swift in Sources */,
+				5DE81E282152F04700CA7298 /* AlphanumericCesarCipherTests.swift in Sources */,
+				5DC53D1F214B5C3400FC51CC /* CesarCipherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +397,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = motiveg.SpyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -397,7 +415,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = motiveg.SpyApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -417,7 +435,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anconaesselmann.SpyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpyApp.app/SpyApp";
 			};
@@ -438,7 +456,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.anconaesselmann.SpyAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpyApp.app/SpyApp";
 			};

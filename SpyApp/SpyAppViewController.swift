@@ -2,17 +2,19 @@ import UIKit
 
 class SpyAppViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var input: UITextField!
-    @IBOutlet weak var secret: UITextField!
+    @IBOutlet weak var messageTextField: UITextField!
+    @IBOutlet weak var secretTextField: UITextField!
+    @IBOutlet weak var outputTextField: UILabel!
+    
     @IBOutlet weak var cipherSegmentedControl: UISegmentedControl!
     @IBOutlet weak var encodeButton: UIButton!
     @IBOutlet weak var decryptButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
-    @IBOutlet weak var output: UILabel!
     @IBOutlet weak var copyButton: UIButton!
     
     let factory = CipherFactory()
     var cipher: Cipher!
+    let segmentTitles = ["cesar", "alphacesar", "ftn", "ftn2"]
     
     override func viewDidLoad() {
 
@@ -29,54 +31,45 @@ class SpyAppViewController: UIViewController, UITextFieldDelegate {
         
         // initialize segment selection
         let segmentIndex = 0
-        let key = cipherSegmentedControl.titleForSegment(at: segmentIndex)
-        cipher = factory.cipher(for: key!)
+        let key = segmentTitles[segmentIndex]
+        cipher = factory.cipher(for: key)
 
-        //output.sizeToFit()
     }
     
     @IBAction func cipherSegmentSelected(_ sender: UISegmentedControl) {
         let segmentIndex = cipherSegmentedControl.selectedSegmentIndex
-        let key = cipherSegmentedControl.titleForSegment(at: segmentIndex)
-        cipher = factory.cipher(for: key!)
+        let key = segmentTitles[segmentIndex]
+        cipher = factory.cipher(for: key)
     }
 
     @IBAction func encodeButtonPressed(_ sender: UIButton) {
-        output.text = "" // clear output first
-        let plaintext = input.text!
-        let secret = self.secret.text!
+        outputTextField.text = "" // clear output first
+        let plaintext = messageTextField.text!
+        let secret = self.secretTextField.text!
         
-        if (plaintext == "") {
-            output.text = "No message entered.\n"
-        }
-        if (secret == "") {
-            output.text = output.text! + "No secret entered.\n"
-        }
-        if (plaintext != "" && secret != "") {
-            output.text = cipher.encode(plaintext, secret: secret)
+        if cipher != nil {
+            outputTextField.text = cipher.encode(plaintext, secret: secret)
+        } else {
+            outputTextField.text = CipherMessage.noCipherSelected
         }
     }
     
     @IBAction func decryptButtonPressed(_ sender: UIButton) {
-        output.text = "" // clear output first
-        let plaintext = input.text!
-        let secret = self.secret.text!
+        outputTextField.text = "" // clear output first
+        let plaintext = messageTextField.text!
+        let secret = self.secretTextField.text!
         
-        if (plaintext == "") {
-            output.text = "No message entered.\n"
-        }
-        if (secret == "") {
-            output.text = output.text! + "No secret entered.\n"
-        }
-        if (plaintext != "" && secret != "") {
-            output.text = cipher.decrypt(plaintext, secret: secret)
+        if cipher != nil {
+            outputTextField.text = cipher.decrypt(plaintext, secret: secret)
+        } else {
+            outputTextField.text = CipherMessage.noCipherSelected
         }
     }
 
     @IBAction func clearButtonPressed(_ sender: UIButton) {
-        input.text = ""
-        secret.text = ""
-        output.text = ""
+        messageTextField.text = ""
+        secretTextField.text = ""
+        outputTextField.text = ""
         view.endEditing(true)
     }
 
@@ -85,12 +78,12 @@ class SpyAppViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        input.resignFirstResponder()
+        messageTextField.resignFirstResponder()
         return true
     }
     
     @IBAction func copyButtonPressed(_ sender: UIButton) {
-        UIPasteboard.general.string = output.text
+        UIPasteboard.general.string = outputTextField.text
     }
     
     

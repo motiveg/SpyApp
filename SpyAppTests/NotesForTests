@@ -1,0 +1,48 @@
+POSSIBLE CONSIDERATIONS FOR TEST FUNCTIONS?
+===========================================
++ Segmented Selection
+    - NONE (a default is declared in viewDidLoad)
+
++ Encode Button
+    - Message Field
+        > blank field
+        > spaces
+        > unseeable ascii characters
+        > foreign characters
+    - Secret Field
+        > blank field
+        > spaces
+        > non-digit characters
+        > foreign characters
+
++ Decrypt Button
+    - Message Field
+        > blank field
+        > spaces
+        > unseeable ascii characters
+        > foreign characters
+    - Secret Field
+        > blank field
+        > spaces
+        > non-digit characters
+        > foreign characters
+
++ Clear Button
+    - Message Field
+        > blank field
+        > spaces
+        > unseeable ascii characters
+        > foreign characters
+    - Secret Field
+        > blank field
+        > spaces
+        > non-digit characters
+        > foreign characters
+    - Output
+        > while an error is displayed in the output
+
++ Copy Button
+    - Output
+        > empty output
+        > error output
+        > filled fields + blank output
