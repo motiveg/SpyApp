@@ -1,7 +1,9 @@
 # SpyApp
 
 Student: Brian Casipit
+
 Language: Swift 4.2
+
 Tested for iOS 11.4
 
 ## Overview
@@ -16,6 +18,13 @@ The main goal of this app is to encode and decrypt messages for the purpose of m
 * clear all fields
 
 A future version of this app will most likely include the capability to message other users.
+
+## Names Of Current Ciphers
+
+* Cesar
+* Alphanumeric Cesar
+* Ftn
+* Ftn2
 
 ## Preview
 
