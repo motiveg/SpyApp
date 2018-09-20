@@ -15,6 +15,7 @@ The main goal of this app is to encode and decrypt messages for the purpose of m
 * enter a "secret" (in this case, an unsigned integer) to use for their message
 * encode with the message field and secret field filled
 * decrypt with the message field and secret field filled
+* copy output to the clipboard
 * clear all fields
 
 A future version of this app will most likely include the capability to message other users.
